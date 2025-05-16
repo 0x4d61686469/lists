@@ -1,3 +1,6 @@
 [submodule "seclist"]
 	path = seclist
 	url = https://github.com/danielmiessler/SecLists.git
+[submodule "top25-parameter"]
+	path = top25-parameter
+	url = https://github.com/lutfumertceylan/top25-parameter.git
