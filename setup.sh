@@ -93,9 +93,13 @@ cat dns-lists/2m-subdomains.txt dns-lists/best-dns-wordlist.txt | sort -u | anew
 cat dns-lists/altdns-words.txt dns-lists/dnsgen-words.txt | sort -u | anew dns-lists/words.txt
 crunch 1 4 abcdefghijklmnopqrstuvwxyz0123456789 | anew dns-lists/4-lower.txt
 
+echo "Done dns-lists and dns crunch"
+
 crunch 1 3 abcdefghijklmnopqrstuvwxyz0123456789._- | anew most_used/3chars-with._-
 crunch 1 4 abcdefghijklmnopqrstuvwxyz0123456789 | anew most_used/4chars
 crunch 1 4 abcdefghijklmnopqrstuvwxyz0123456789._- | anew most_used/4chars-with._-
+
+echo "Done most_used and most_used crunch"
 
 echo
 echo "All done."

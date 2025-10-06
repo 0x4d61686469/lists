@@ -9,4 +9,6 @@ most_used/wordlist_with_underscores.txt
 other-lists/httparchive_parameters_top_1m
 kiterunner/routes-large.kite
 kiterunner/routes-small.kite
-
+most_used/3chars-with._-
+most_used/4chars
+most_used/4chars-with._-
