@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dd0cde7fe20559412678b4faa19fdff9c46d20949a41506b657018fa2c160004
-size 911
+# format: <url> <destination_path>
+https://wordlists-cdn.assetnote.io/data/kiterunner/routes-small.kite.tar.gz ./kiterunner/routes-small.kite
+https://wordlists-cdn.assetnote.io/data/kiterunner/routes-large.kite.tar.gz ./kiterunner/routes-large.kite
+https://wordlists-cdn.assetnote.io/data/manual/2m-subdomains.txt ./dns-lists/2m-subdomains.txt
+https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt ./dns-lists/best-dns-wordlist.txt
+https://raw.githubusercontent.com/infosec-au/altdns/master/words.txt ./dns-lists/altdns-words.txt
+https://raw.githubusercontent.com/AlephNullSK/dnsgen/master/dnsgen/words.txt ./dns-lists/dnsgen-words.txt
+https://wordlists-cdn.assetnote.io/data/manual/wordlist_with_underscores.txt ./most_used/wordlist_with_underscores.txt
+https://wordlists-cdn.assetnote.io/data/automated/httparchive_parameters_top_1m_2025_09_27.txt ./other-lists/httparchive_parameters_top_1m

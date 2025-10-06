@@ -65,19 +65,13 @@ while IFS= read -r rawline || [ -n "$rawline" ]; do
   fi
 
   if [ "$skip" = false ]; then
-    tmp="${dest}.part"
     echo
     echo "Downloading:"
     echo "  URL -> $url"
     echo "  DEST -> $dest"
-    echo "  TMP  -> $tmp"
 
-    if wget -c --show-progress -O "$tmp" "$url"; then
-      mv -f -- "$tmp" "$dest"
+    if wget -c --show-progress -O "$dest" "$url"; then
       echo "Saved: $dest"
-    else
-      echo "ERROR: download failed for $url (partial saved at $tmp if any)"
-      continue
     fi
   fi
 
@@ -96,10 +90,12 @@ while IFS= read -r rawline || [ -n "$rawline" ]; do
 done < "$URLS_FILE"
 
 cat dns-lists/2m-subdomains.txt dns-lists/best-dns-wordlist.txt | sort -u | anew  dns-lists/assetnote-merged.txt
-
 cat dns-lists/altdns-words.txt dns-lists/dnsgen-words.txt | sort -u | anew dns-lists/words.txt
-
 crunch 1 4 abcdefghijklmnopqrstuvwxyz0123456789 | anew dns-lists/4-lower.txt
+
+crunch 1 3 abcdefghijklmnopqrstuvwxyz0123456789._- | anew most_used/3chars-with._-
+crunch 1 4 abcdefghijklmnopqrstuvwxyz0123456789 | anew most_used/4chars
+crunch 1 4 abcdefghijklmnopqrstuvwxyz0123456789._- | anew most_used/4chars-with._-
 
 echo
 echo "All done."
